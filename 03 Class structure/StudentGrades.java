@@ -33,8 +33,16 @@ public class StudentGrades {
         return grades.length;
     }
     
+    public double sum(double[] array) {
+        double res = 0;
+        for (double num : array) {
+            res += num;
+        }
+        return res;
+    }
+    
     public double gradePointAverage() {
-        return DoubleStream.of(grades).sum() / grades.length;
+        return sum(grades) / grades.length;
     }
     
     public void recordMessage() {
@@ -43,7 +51,7 @@ public class StudentGrades {
             + "Grades: %s\n"
             + "Number of grades: %d\n"
             + "Lowest grade: %f\n"
-            + "Highest grades: %f\n"
+            + "Highest grade: %f\n"
             + "GPA: %f\n",
             
             studentName,
