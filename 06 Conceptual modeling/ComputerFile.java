@@ -124,11 +124,11 @@ public class ComputerFile
     // Other Methods
     public void moveToBin() {
         System.out.println("> Moving the file " + getName() + getExtension() + " to a bin...");
-        this.location = "\\bin";
+        setLocation("\\bin");
     }
     
     public boolean isInBin() {
-        return this.location == "\\bin";
+        return getLocation() == "\\bin";
     }
     
     public ComputerFile createShortcut() {
