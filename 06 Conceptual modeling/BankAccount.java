@@ -14,9 +14,11 @@ public class BankAccount
     public void deposit(int amount) {
         this.budget += amount;
     }
+    
     public void displayBalance() {
         System.out.println(this.budget + " " + this.currency);
     }
+    
     public boolean withdraw(int amount) {
         if (amount > this.maxWithdrawalAmount) {
             System.out.println(
@@ -34,5 +36,15 @@ public class BankAccount
         
         System.out.println("Not enough money in your account.");
         return false;
+    }
+    
+    public static void main(String[] args) {
+        BankAccount b1 = new BankAccount();
+        b1.deposit(500);
+        b1.displayBalance();
+        b1.deposit(200);
+        b1.displayBalance();
+        b1.withdraw(300);
+        b1.displayBalance();
     }
 }
