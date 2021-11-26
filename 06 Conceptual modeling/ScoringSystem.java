@@ -1,3 +1,5 @@
+import java.util.*;
+
 public class ScoringSystem
 {
     int[] scores;
@@ -8,7 +10,8 @@ public class ScoringSystem
     }
     
     public String toString() {
-        return Float.toString(calculate(this.scores));
+        return "Result for scores " + Arrays.toString(this.scores) + ": " +
+        Float.toString(calculate(this.scores));
     }
     
     
