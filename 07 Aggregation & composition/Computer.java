@@ -2,7 +2,7 @@ public class Computer {
     String brand;
     String model;
     int yearOfProduction;
-    Processor cpu;
+    final Processor cpu;
     String gpu;
     String[] externalDevices;
     
@@ -18,7 +18,6 @@ public class Computer {
         
     public void turnOn() {}
     public void turnOff() {}
-    public void turnOnSafeMode() {}
     
     public static void main(String[] args) {
         Computer computer1 = new Computer("Lenovo", "Legion 5");

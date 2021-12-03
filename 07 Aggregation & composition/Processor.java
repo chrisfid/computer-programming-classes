@@ -15,6 +15,6 @@ public class Processor {
     }
     
     public void turnOnSafeMode() {
-        System.out.println("WARRING, WARRING!");
+        System.out.println("Safe mode is turned on!");
     }
 }
