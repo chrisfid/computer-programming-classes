@@ -1,17 +1,27 @@
 public class Book
 {
     private String title;
-    private String author;
+    private Writer author;
+    private Publisher publisher;
+    private int releaseYear;
     
-    public Book(String title, String author) {
+    public Book(
+        String title,
+        Writer author,
+        Publisher publisher,
+        int releaseYear
+    ) {
         setTitle(title);
         setAuthor(author);
+        setPublisher(publisher);
+        setReleaseYear(releaseYear);
     }
     
     public String toString() {
         return (
             "Title: " + getTitle() + "\n" + 
-            "Author: " + getAuthor()
+            getAuthor() + "\n" +
+            getPublisher()
         );
     }
     
@@ -23,12 +33,28 @@ public class Book
         this.title = newTitle;
     }
     
-    public String getAuthor() {
+    public Writer getAuthor() {
         return this.author;
     }
     
-    public void setAuthor(String newAuthor) {
+    public void setAuthor(Writer newAuthor) {
         this.author = newAuthor;
+    }
+    
+    public Publisher getPublisher() {
+        return this.publisher;
+    }
+    
+    public void setPublisher(Publisher newPublisher) {
+        this.publisher = newPublisher;
+    }
+    
+    public int getReleaseYear() {
+        return this.releaseYear;
+    }
+    
+    public void setReleaseYear (int newYear) {
+        this.releaseYear = newYear;
     }
     
     public void display() {
